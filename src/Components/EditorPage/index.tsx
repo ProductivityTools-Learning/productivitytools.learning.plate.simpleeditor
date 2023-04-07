@@ -1,5 +1,6 @@
 import {
   Plate,
+  createPlugins,
   createBlockquotePlugin,
   createBoldPlugin,
   createCodeBlockPlugin,
@@ -15,7 +16,7 @@ import { MyParagraphElement, MyValue,MyPlatePlugin } from "./typescript/plateTyp
 import { useState } from "react";
 import { basicElementsValue } from './basic-elements/basicElementsValue';
 import { basicMarksValue } from './basic-marks/basicMarksValue';
-import { plateUI } from './common/plateUI';
+import { plateUI } from './common/plateUI.ts';
 export default function EditorPage() {
 
 
