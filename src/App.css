@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+/* html {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+td {
+  border: 1px solid;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+[data-slate-editor] {
+  padding: 84px 50px 50px;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.slate-HeadingToolbar {
+  padding: 17px 60px !important;
+  position: fixed !important;
+  background: white !important;
+  z-index: 1000;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tippy-box[data-theme~='tomato'] {
+  background-color: tomato;
+  color: yellow;
 }
+
+.slate-selection-area {
+  background: #4f90f22d;
+  border: 1px solid #4f90f2;
+}
+
+.drag-button {
+  overflow: hidden;
+  padding: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border-style: none;
+  cursor: pointer;
+  outline: 0;
+
+  min-width: 18px;
+  min-height: 18px;
+}
+
+.MuiSvgIcon-root {
+  font-size: 18px !important;
+} */
