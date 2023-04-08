@@ -20,11 +20,11 @@ import {
   ELEMENT_H5,
   ELEMENT_H6,
   ELEMENT_PARAGRAPH,
-  
 } from "@udecode/plate";
 import { MyParagraphElement, MyValue, MyPlatePlugin } from "./typescript/plateTypes";
 import { useState } from "react";
 import { basicElementsValue } from "./basic-elements/basicElementsValue";
+import { BasicMarkToolbarButtons } from './basic-marks/BasicMarkToolbarButtons.tsx';
 import { basicMarksValue } from "./basic-marks/basicMarksValue";
 import { plateUI } from "./common/plateUI.ts";
 import { AlignToolbarButtons } from "./align/AlignToolbarButtons.tsx";
@@ -51,17 +51,9 @@ export default function EditorPage() {
       createAlignPlugin({
         inject: {
           props: {
-            validTypes: [
-              ELEMENT_PARAGRAPH,
-              ELEMENT_H1,
-              ELEMENT_H2,
-              ELEMENT_H3,
-              ELEMENT_H4,
-              ELEMENT_H5,
-              ELEMENT_H6
-            ]
-          }
-        }
+            validTypes: [ELEMENT_PARAGRAPH, ELEMENT_H1, ELEMENT_H2, ELEMENT_H3, ELEMENT_H4, ELEMENT_H5, ELEMENT_H6],
+          },
+        },
       }),
     ],
     {
@@ -89,14 +81,18 @@ export default function EditorPage() {
   return (
     <div>
       editorPage
-      <PlateProvider<MyValue> initialValue={initialValue} plugins={plugins}  onChange={(x) => setValue(JSON.stringify(x))}>
+      <PlateProvider<MyValue>
+        initialValue={initialValue}
+        plugins={plugins}
+        onChange={(x) => setValue(JSON.stringify(x))}
+      >
         <Toolbar>
+          <BasicMarkToolbarButtons />
           <AlignToolbarButtons></AlignToolbarButtons>
         </Toolbar>
         <Plate
           // plugins={plugins}
           editableProps={editableProps}
-         
         ></Plate>
       </PlateProvider>
       <span>Raw value:</span>
