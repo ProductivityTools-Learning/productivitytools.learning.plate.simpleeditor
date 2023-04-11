@@ -20,14 +20,18 @@ import {
   ELEMENT_H5,
   ELEMENT_H6,
   ELEMENT_PARAGRAPH,
+  LinkToolbarButton,
+  createLinkPlugin
 } from "@udecode/plate";
 import { MyParagraphElement, MyValue, MyPlatePlugin } from "./typescript/plateTypes";
 import { useState } from "react";
+import { Link } from '@styled-icons/material/Link';
 import { basicElementsValue } from "./basic-elements/basicElementsValue";
 import { BasicMarkToolbarButtons } from './basic-marks/BasicMarkToolbarButtons.tsx';
 import { basicMarksValue } from "./basic-marks/basicMarksValue";
 import { plateUI } from "./common/plateUI.ts";
 import { AlignToolbarButtons } from "./align/AlignToolbarButtons.tsx";
+import { linkPlugin } from './link/linkPlugin';
 
 import { Toolbar } from "./toolbar/Toolbar.tsx";
 
@@ -36,6 +40,7 @@ export default function EditorPage() {
   const plugins = createPlugins<MyValue>(
     [
       createParagraphPlugin(),
+      createLinkPlugin(linkPlugin),
       createBlockquotePlugin(),
       // createCodeBlockPlugin({
       //   // You can either pass a component per plugin
@@ -89,6 +94,7 @@ export default function EditorPage() {
         <Toolbar>
           <BasicMarkToolbarButtons />
           <AlignToolbarButtons></AlignToolbarButtons>
+          <LinkToolbarButton icon={<Link />} />
         </Toolbar>
         <Plate
           // plugins={plugins}
