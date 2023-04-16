@@ -31,7 +31,7 @@ import { BasicMarkToolbarButtons } from './basic-marks/BasicMarkToolbarButtons.t
 import { basicMarksValue } from "./basic-marks/basicMarksValue";
 import { plateUI } from "./common/plateUI.ts";
 import { AlignToolbarButtons } from "./align/AlignToolbarButtons.tsx";
-import { linkPlugin } from './link/linkPlugin';
+import { linkPlugin } from './link/linkPlugin.tsx';
 
 import { Toolbar } from "./toolbar/Toolbar.tsx";
 
